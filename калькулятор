@@ -1,0 +1,56 @@
+cout << "Набор 2 - х элементов, ввод -вывод 2 - х элементов, ввод - вывод 2 - х элементов, ввод - вывод 2 - х элементов:" << "\n";
+cout << del(a, b) << "\n";
+	}
+	ещё
+	{
+ cout << "Графический редактор";
+	}
+	0 возвратов;
+}
+
+sum int(int a, int b)
+{
+	cin >> a;
+	cin >> b;
+	cin >> a >> b;
+	return (a + b);
+}
+int razn(int a, int b)
+{
+	cin >> a;
+	cin >> b;
+	cin >> a >> b;
+	return (a - b);
+}
+int mnoj(int a, int b)
+{
+	cin >> a;
+	cin >> b;
+	cin >> a >> b;
+	return (a * b);
+}
+float del(int a, int b)
+{
+	cin >> a;
+	cin >> b;
+	cin >> a >> b;
+	if (b == 0)
+	{
+		while (b == 0)
+			@@ - 84, 14 + 84, 12 @@ float del(int a, int b)
+	}
+	int step(int a, int b)
+	{
+		cin >> a;
+		cin >> b;
+		cin >> a >> b;
+		return pow(a, b);
+	}
+	корень float(int a, int b)
+	{
+		cin >> a;
+		cin >> b;
+		cin >> a >> b;
+		если(a < 0 и b % 2 == 0)
+		{
+			пока(a < 0 и b % 2 == 0)
