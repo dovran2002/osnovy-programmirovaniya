@@ -1,56 +1,103 @@
-cout << "Набор 2 - х элементов, ввод -вывод 2 - х элементов, ввод - вывод 2 - х элементов, ввод - вывод 2 - х элементов:" << "\n";
-cout << del(a, b) << "\n";
-	}
-	ещё
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int a, b;
+std::string deystvie;
+int sum(int a, int b);
+int razn(int a, int b);
+int mnoj(int a, int b);
+float del(int a, int b);
+int step(int a, int b);
+float koren(int a, int b);
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	std::cout << "Ââåäèòå îïåðàöèþ (+, -, //, *, ^, sqrt):" << "\n";
+	std::cin >> deystvie;
+	if (deystvie == "+")
 	{
- cout << "Графический редактор";
+		cout << "Ââåäèòå 2 ÷èñëà:" << "\n";
+		cout << sum(a, b) << "\n";
 	}
-	0 возвратов;
+	if (deystvie == "-")
+	{
+		cout << "Ââåäèòå 2 ÷èñëà, ñíà÷àëà óìåíüøàåìîå, ïîòîì âû÷èòàåìîå:" << "\n";
+		cout << razn(a, b) << "\n";
+	}
+	if (deystvie == "*")
+	{
+		cout << "Ââåäèòå 2 ÷èñëà:" << "\n";
+		cout << mnoj(a, b) << "\n";
+	}
+	if (deystvie == "^")
+	{
+		cout << "Ââåäèòå 2 ÷èñëà, ñíà÷àëà îñíîâàíèå, ïîòîì ñòåïåíü:" << "\n";
+		cout << step(a, b) << "\n";
+	}
+	if (deystvie == "sqrt")
+	{
+		cout << "Ââåäèòå 2 ÷èñëà, ñíà÷àëà ïîäêîðåííîå âûðàæåíèå, ïîòîì ñòåïåíü êîðíÿ:" << "\n";
+		cout << koren(a, b) << "\n";
+	}
+	if (deystvie == "//")
+	{
+		cout << "Ââåäèòå 2 ÷èñëà, ñíà÷àëà äåëèìîå, ïîòîì äåëèòåëü:" << "\n";
+		cout << del(a, b) << "\n";
+	}
+	else
+	{
+		cout << "Íåäîïóñòèìûé îïåðàòîð";
+	}
+	return 0;
 }
 
-sum int(int a, int b)
+int sum(int a, int b)
 {
-	cin >> a;
-	cin >> b;
 	cin >> a >> b;
 	return (a + b);
 }
 int razn(int a, int b)
 {
-	cin >> a;
-	cin >> b;
 	cin >> a >> b;
 	return (a - b);
 }
 int mnoj(int a, int b)
 {
-	cin >> a;
-	cin >> b;
 	cin >> a >> b;
 	return (a * b);
 }
 float del(int a, int b)
 {
-	cin >> a;
-	cin >> b;
 	cin >> a >> b;
 	if (b == 0)
 	{
 		while (b == 0)
-			@@ - 84, 14 + 84, 12 @@ float del(int a, int b)
-	}
-	int step(int a, int b)
-	{
-		cin >> a;
-		cin >> b;
-		cin >> a >> b;
-		return pow(a, b);
-	}
-	корень float(int a, int b)
-	{
-		cin >> a;
-		cin >> b;
-		cin >> a >> b;
-		если(a < 0 и b % 2 == 0)
 		{
-			пока(a < 0 и b % 2 == 0)
+			cout << "Ââåäèòå äðóãîé äåëèòåëü:" << "\n";
+			cin >> b;
+		}
+	}
+	return (a * 1.0) / (b*1.0);
+}
+int step(int a, int b)
+{
+	cin >> a >> b;
+	return pow(a, b);
+}
+float koren(int a, int b)
+{
+	cin >> a >> b;
+	if (a < 0 and b % 2 == 0)
+	{
+		while (a < 0 and b % 2 == 0)
+		{
+			cout << "Íåâîçìîæíàÿ îïåðàöèÿ, èçìåíèòèå äàííûå:";
+			cin >> a;
+			cin >> b;
+		}
+	}
+	return pow(a*1.0, 1/(b*1.0));
+}
